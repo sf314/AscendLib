@@ -3,8 +3,11 @@ Stuff in this library:
 ALBaro (barometer)
 SD (covered in external SDWrite)
 ALTempA
+  setPin(int)
+  setVoltage(double)
+  read()
 ALTempD
 ALHeater
+  setPin(int)
+  setHeat(val)
 ALCamera
-
-
