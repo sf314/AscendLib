@@ -21,6 +21,7 @@ Connect MOSFET Gate pin to digital pin 3
 Connect MOSFET Drain pin to ground of heating pad(s)
 Connect MOSFET Source to Arduino ground
 Connect 10k resistor from digital pin 3 (between board and MOSFET Gate) to Arduino ground (between board and MOSFET Source)
-
+Connect heating pad V to Arduino 5V
+// See image placed in AscendLib folder
 
 */
