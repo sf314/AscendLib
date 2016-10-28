@@ -1,7 +1,10 @@
+//* This library will make sensor integration über simple!
+
 Stuff in this library:
 
 ALBaro (barometer)
-SD (covered in external SDWrite)
+ALData (SD card library) (basically SDWrite)
+  // see SDWrite.h
 ALTempA
   setPin(int)
   setVoltage(double)
