@@ -1,9 +1,9 @@
-// Header file for ALData custom library
+// Header file for SDWrite custom library
 
 /* Description of functions in library
  *
  *  Funcs(): default constructor. Does nothing.
- *  Create objects like "" ALData sd; ""
+ *  Create objects like "" SDWrite sd; ""
  *  Call functions like "" sd.writeInt(3); ""
  *
  *  initSD(): initialize the SD card reader on the sdPin. Keep looping until done.
@@ -15,31 +15,30 @@
  *  // For safety, each function opens and closes the file within the brackets, ensuring that everything is safe.
  *
  */
-#ifndef ALData_h
-#define ALData_h
+#ifndef SDWrite_h
+#define SDWrite_h
 
 // Inclusions
 #include <Arduino.h>
 #include <SPI.h>
 #include <SD.h>
 
-class ALData {
+class SDWrite {
   public:
-  ALData(); // Initializer
+  SDWrite(); // Initializer
   void initSD();
-  void setupFile(String name, String columns);
+  void setupFile(char name[20], String columns);
   void startNewLog();
   void writeInt(int n);
   void writeDouble(double n);
   void writeString(String s);
   void changeSDPin(int n);
     void close();
-    void newLine();
 
   private:
   static int logCounter;
   static File dataFile;
-  static String fileName;
+  static char fileName[20];
   static int sdPin;
     static bool useSD;
 

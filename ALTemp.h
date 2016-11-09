@@ -10,4 +10,4 @@ public:
 private:
     static int tempPin; // default analog 0
     static int voltage; // default 5V
-}
+};
